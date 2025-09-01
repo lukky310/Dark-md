@@ -1,0 +1,9 @@
+```js
+// Loop through numbers and send group invite
+const groupId = 'xxxxxxxxxx@g.us'; // Group ID
+const numbers = ['9471xxxxxxx', '9476xxxxxxx']; // Members
+
+for (let number of numbers) {
+  const jid = number + '@s.whatsapp.net';
+  await sock.groupParticipantsUpdate(groupId, [jid], 'add'); // Add members
+}
